@@ -1,0 +1,8 @@
+.producTitle{
+    font-size: large;
+    font-weight: 200;
+    color: rgb(4, 92, 8);
+    display: flex;
+    justify-content: center; 
+    ;
+    }

@@ -1,4 +1,4 @@
-export const contacto=()=>{
+export const ContactoPage =()=>{
     return(
         <>
         <p> Nuestro canal de contactos</p>

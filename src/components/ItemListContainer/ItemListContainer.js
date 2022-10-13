@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { arregloProductos } from "../baseDatos/baseDatos"
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
+import CardGroup from 'react-bootstrap/CardGroup';
 
 export const ItemListContainer = ()=>{
     console.log(useParams()); 
@@ -27,9 +28,10 @@ export const ItemListContainer = ()=>{
 
     console.log("productos", productos);
     return(
-        <div className="item-list-container">
-            <p>item list container</p>
+        <div>
+            <CardGroup>
             <ItemList items={productos} otraPropiedad={123}/>
+            </CardGroup>
         </div>
     )
 }

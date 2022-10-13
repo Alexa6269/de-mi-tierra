@@ -15,7 +15,7 @@ export const NavBar = function CollapsibleExample() {
     <Navbar collapseOnSelect expand="lg" bg="white" sticky="top">
       <Container className="navegation">
         <Navbar.Brand href="/">
-          <img className='logo' src={ImagenLogo} alt="logo" srcset="" />
+          <img className='logo' src={ImagenLogo} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

@@ -8,6 +8,7 @@ import Button from 'react-bootstrap/Button';
 import ImagenLogo from '../../assets/img/logo.jpg'
 import Stack from 'react-bootstrap/Stack';
 import { CartWidget } from "../CartWidget/CartWidget";
+import { Link } from "react-router-dom";
 
 export const NavBar = function CollapsibleExample() {
   return (
@@ -19,18 +20,18 @@ export const NavBar = function CollapsibleExample() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="manu me-auto">
-            <Nav.Link href="">Home</Nav.Link>
+          <Nav className="NavBar me-auto">
+            <Nav.Link ><Link className="linkTo" to="/">Home</Link></Nav.Link>
             <NavDropdown title="Productos" href="/productos" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="/productos/frutas">Frutas</NavDropdown.Item>
-              <NavDropdown.Item href="/productos/verduras">Verduras</NavDropdown.Item>
-              <NavDropdown.Item href="/productos/huevos">Huevos</NavDropdown.Item>
+              <NavDropdown.Item ><Link className="linkTo" to="/category/frutas">Frutas</Link></NavDropdown.Item>
+              <NavDropdown.Item ><Link className="linkTo" to="/category/verduras">Verduras</Link></NavDropdown.Item>
+              <NavDropdown.Item ><Link className="linkTo" to="/category/huevos">Huevos</Link></NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="/carrito">
                 Carrito de compras
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#pricing">Contáctenos</Nav.Link>
+            <Nav.Link ><Link className="linkTo" to="/contactenos">Contáctenos</Link></Nav.Link>
           </Nav>
           <Nav>
           <Stack direction="horizontal" gap={3}>

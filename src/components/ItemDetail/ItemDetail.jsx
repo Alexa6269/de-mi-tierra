@@ -1,14 +1,22 @@
+import { Stack } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 export const ItemDetail = ({item})=>{
     return(
         <div className='detail-container'>
-            <p style={{width: "100%"}}>item detail</p>
-            <div className='img-container'>
-                <img src={item.pictureUrl} alt={item.title}/>
-            </div>
-            <div className='img-container'>
-                <h4>{item.title}</h4>
-                <h5>$ {item.price}</h5>
-            </div>
+            <Card border="success" style={{ width: '50%' }}>
+             <Card.Img src={item.PictureUrl}/>
+             <Card.Body>
+             <Card.Title>{item.title}</Card.Title>
+             <Card.Text> {item.precio}</Card.Text>
+             </Card.Body>
+             <Stack gap={2} className="col-md-5 ">
+            <Button variant="secondary"><Link to="/item/{item.id}">Ver más</Link></Button>
+            <Button variant="success">Añadir al carrito</Button>
+            </Stack>
+          
+         </Card>
         </div>
     )
 }

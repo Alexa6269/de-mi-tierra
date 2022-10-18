@@ -1,14 +1,16 @@
-import { arregloProductos } from "../baseDatos/baseDatos";
+
 import { Item } from "../Item/Item";
+import CardGroup from 'react-bootstrap/CardGroup';
 export const ItemList = ({items, otraPropiedad})=>{
     return(
         <div className="estilos-listado">
-            <div style={{width:"100%"}}>item list</div>
+           <CardGroup style={{ width: '50%', margin:'10px',} }>
             {
-                arregloProductos.map(producto=>(
+                items.map(producto=>(
                     <Item key={producto.id} item={producto}/>
                 ))
             }
+        </CardGroup>
         </div>
     )
 }

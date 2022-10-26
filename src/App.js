@@ -12,11 +12,10 @@ function App() {
     <div >
         <NavBar/>
         <Routes>
-         <Route path='/' element={<ItemListContainer></ItemListContainer>}></Route>
-         <Route path='/category/:categoryId'element={<ItemListContainer></ItemListContainer>}></Route>
-         <Route path='/item/:id'element={<ItemDetailContainer></ItemDetailContainer>}></Route>
-         <Route path='/contactenos' element={<ContactoPage></ContactoPage>}></Route>
-      
+         <Route path='/' element={<ItemListContainer/>}></Route>
+         <Route path='/category/:categoryId'element={<ItemListContainer/>}></Route>
+         <Route path='/item/:id'element={<ItemDetailContainer/>}></Route>
+         <Route path='/contactenos' element={<ContactoPage/>}></Route>
         </Routes>
      
   

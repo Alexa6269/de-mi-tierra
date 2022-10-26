@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { arregloProductos } from "../baseDatos/baseDatos"
 import { ItemList } from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
-import { CardGroup } from "react-bootstrap";
+
 
 
 export const ItemListContainer = ()=>{

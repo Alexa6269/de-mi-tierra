@@ -14,7 +14,7 @@ export const Item = ({item}) => {
              <Card.Text> {item.precio}</Card.Text>
              </Card.Body>
              <Stack gap={2} className="col-md-5 ">
-            <Button variant="secondary"><Link to="/item/{item.id}">Ver más</Link></Button>
+            <Link to={`/item/${item.id}`}>Ver más</Link>
             <Button variant="success">Añadir al carrito</Button>
             </Stack>
           

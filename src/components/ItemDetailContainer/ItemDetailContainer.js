@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { arregloProductos } from "../baseDatos/baseDatos";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import {useParams} from "react-router-dom";
-import { arregloProductos } from "../baseDatos/baseDatos";
 
-export const ItemDetailContainer = ()=>{
+
+export const  ItemDetailContainer = ()=>{
     const {id} = useParams(); 
     const [itemProduct, setItemProduct] = useState({});
 
@@ -17,7 +18,7 @@ export const ItemDetailContainer = ()=>{
         const getProducto = async()=>{
             const productos = await promesa;
             console.log('productos', productos);
-            const producto = productos.find(elemento=>elemento.id === parseInt(id));
+            const producto = productos.find(elemento=>elemento.id === (id));
             console.log("producto", producto)
             setItemProduct(producto);
         }
@@ -26,7 +27,7 @@ export const ItemDetailContainer = ()=>{
 
     return(
         <div className="item-detail-container">
-            <ItemDetail />
+            <ItemDetail item={itemProduct}/>
         </div>
     )
 }
